@@ -1,0 +1,46 @@
+請嚴格執行HTML結構化清洗，遵循以下規則：
+
+▌核心原則
+1. 保留頁面內容，移除全站通用元素
+2. 輸出用<output></output>包裹
+
+▌結構保留規範
+[必須刪除]
+- 全站通用元素：
+  • 頁首導航 (nav, .header, .mainNav)
+  • 分享/字體/語言工具列
+  • 網站通知/橫幅
+  • 手機相關元素 (mobileXXXX)
+  • 頁尾相關所有元素 (#footer, footerXXXX)
+
+- 技術性元素：
+  • 所有 <script> 
+  • Google Tag Manager代碼
+  • WebForm相關元素（<form>, __VIEWSTATE等隱藏欄位）
+  • 虛擬助理圖標(.virtualAssistantIcon)
+
+▌細節處理規則
+1. 重複結構保留：
+   遇到相同class多次出現時（如多個.contact_shop_location），保留所有實例
+   範例：分店列表需完整保留香港/九龍/新界所有據點
+
+▌輸出格式要求
+<output>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[原始標題]</title>
+</head>
+<body>
+  <!-- 只保留pageWrapper及其內部清洗後內容 -->
+  <div class="pageWrapper">
+    [清洗後的主體內容]
+  </div>
+</body>
+</html>
+</output>
+
+HTML內容：
+{html_content}

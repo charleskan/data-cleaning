@@ -1,0 +1,11 @@
+{
+    "total": 447,
+    "success": 447,
+    "failed": 0,
+    "retried": 1,
+    "failed_files": [],
+    "start_time": 1741861955.7062662,
+    "end_time": 1741863613.565119,
+    "elapsed_seconds": 1657.8588528633118,
+    "files_per_second": 0.2696248834621716
+}
